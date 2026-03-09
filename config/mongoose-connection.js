@@ -6,3 +6,4 @@ mongoose.connect('mongodb://127.0.0.1:27017/Scatch')
 .catch((e)=>{
     console.log('Error:\n',e);
 });
+module.exports = mongoose.connection;
