@@ -1,13 +1,16 @@
 const express = require('express');
 const app = express();
 const DBConn = require('./config/mongoose-connection');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
+const ownerRoutes = require('./routes/ownerRoutes');
 
 
-// Home
-app.get('/users',(req,res)=>{
-    res.send('home working');
+app.use('/users',userRoutes);
+app.use('/products',productRoutes);
+app.use('/owners',ownerRoutes);
 
-})
+
 
 
 
