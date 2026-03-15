@@ -8,8 +8,7 @@ const ownerSchema = mongoose.Schema({
   products: {
     type: Array,
     default: [],
-  },
-  picture: String,
+  }
 });
 
 module.exports = mongoose.model("owner", ownerSchema);

@@ -1,9 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-
-router.get('/',(req,res)=>{
-    res.send('owner working');
-});
+const ownerModel = require("../models/owner-model");
 
 
 module.exports = router;
